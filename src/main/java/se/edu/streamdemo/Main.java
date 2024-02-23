@@ -20,13 +20,15 @@ public class Main {
 
         System.out.println("Printing deadlines ...");
         printDeadlines(tasksData);
-
+        //printUsingStreams(tasksData);
         System.out.println("Total number of deadlines: " + countDeadlines(tasksData));
         System.out.println("printing deadlines using streams");
         printDeadlinesUsingStreams(tasksData);
 
         ArrayList<Task> filteredList = filterByString(tasksData, "11");
         printAllData(filteredList);
+        //printDeadlineUsingStreams(tasksData);
+        //System.out.println("deadlines using stream:" + countDeadlinesUsingStreams(tasksData));
     }
 
     private static int countDeadlines(ArrayList<Task> tasksData) {
