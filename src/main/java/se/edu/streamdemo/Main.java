@@ -60,7 +60,7 @@ public class Main {
                 .forEach(System.out::println);
     }
     public static ArrayList<Task> filterByString(ArrayList<Task> tasks, String filterString) {
-        ArrayList<Task> filteredList = (ArrayList<Task>) tasks.stream().filter(t -> t.getDescription().contains(filterString)).collect(toList());
+        ArrayList<Task> filteredList = (ArrayList<Task>) tasks.stream().filter(t -> t instanceof Deadline&&t.getDescription().contains(filterString)).collect(toList());
         return filteredList;
     }
 
